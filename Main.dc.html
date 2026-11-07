@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>cercanIA · Gestoría con IA en tu pueblo</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F6F5F1}
+a{color:#1D4E3B}a:hover{color:#123426}
+</style>
+</helmet>
+<div style="font-family: 'Atkinson Hyperlegible', system-ui, sans-serif; color: #1B1F1D; background: #F6F5F1; width: 100%; min-height: 100vh">
+
+<header style="background: #FFFFFF; border-bottom: 1px solid #E2E0D8">
+<div style="max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="#inicio" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #1B1F1D">
+<svg aria-hidden="true" width="48" height="48" viewBox="0 0 160 160" style="flex: 0 0 48px">
+<circle cx="80" cy="80" r="72" fill="#1D4E3B"></circle>
+<path d="M102.5 61 A 26 26 0 0 1 102.5 87 M112.9 55 A 38 38 0 0 1 112.9 93" fill="none" stroke="#E8A33D" stroke-width="6" stroke-linecap="round"></path>
+<path d="M57.5 61 A 26 26 0 0 0 57.5 87 M47.1 55 A 38 38 0 0 0 47.1 93" fill="none" stroke="#E8A33D" stroke-width="6" stroke-linecap="round"></path>
+<path d="M66 66 L80 42 L94 66 Z" fill="#FFFFFF"></path>
+<rect x="69" y="66" width="22" height="56" fill="#FFFFFF"></rect>
+<path d="M75 94 V86 A5 5 0 0 1 85 86 V94 Z" fill="#1D4E3B"></path>
+<path d="M44 122 H116" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"></path>
+</svg>
+<span style="font-size: 28px; font-weight: 700; letter-spacing: -0.01em"><span style="color: #1D4E3B">cercan</span><span style="color: #B06A00">IA</span></span>
+</a>
+<nav aria-label="Principal" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px">
+<a href="#como" style="font-size: 18px; padding: 12px 14px; text-decoration: none">Cómo funciona</a>
+<a href="#tramites" style="font-size: 18px; padding: 12px 14px; text-decoration: none">Trámites</a>
+<a href="#ayuntamientos" style="font-size: 18px; padding: 12px 14px; text-decoration: none">Para ayuntamientos</a>
+<a href="#empezar" style="font-size: 18px; font-weight: 700; padding: 12px 20px; border-radius: 12px; background: {{accent}}; color: #FFFFFF; text-decoration: none">Empezar</a>
+</nav>
+</div>
+</header>
+
+<section id="inicio" style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 64px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<p style="margin: 0; font-size: 18px; font-weight: 700; color: #7A4A0B; letter-spacing: 0.04em; text-transform: uppercase">Punto de trámites en tu ayuntamiento</p>
+<h1 style="margin: 0; font-size: 56px; line-height: 1.08; font-weight: 700">Haz tus papeles en tu pueblo, hablando.</h1>
+<p style="margin: 0; font-size: 22px; line-height: 1.5; color: #3B423E">Cuéntale a la asistente qué necesitas. Ella te guía paso a paso, lee tus documentos y prepara el trámite. Después, un gestor lo revisa antes de enviarlo.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<a href="#empezar" style="display: flex; align-items: center; gap: 12px; font-size: 22px; font-weight: 700; padding: 18px 28px; border-radius: 16px; background: {{accent}}; color: #FFFFFF; text-decoration: none">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0"></path><path d="M12 18v4"></path></svg>
+Pulsa y habla
+</a>
+<a href="#como" style="font-size: 22px; font-weight: 700; padding: 18px 28px; border-radius: 16px; border: 2px solid #1B1F1D; color: #1B1F1D; text-decoration: none">Ver cómo funciona</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; font-size: 18px; color: #3B423E">
+<span style="display: flex; align-items: center; gap: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D4E3B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>Sin saber de ordenadores</span>
+<span style="display: flex; align-items: center; gap: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D4E3B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>Revisado por un gestor</span>
+<span style="display: flex; align-items: center; gap: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D4E3B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>Sin viajar a la ciudad</span>
+</div>
+</div>
+
+<div style="flex: 1 1 420px; min-width: 0; background: #FFFFFF; border: 1px solid #E2E0D8; border-radius: 24px; padding: 24px; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 12px 32px rgba(27,31,29,0.08)">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<div style="display: flex; align-items: center; gap: 12px">
+<div style="width: 44px; height: 44px; border-radius: 50%; background: #E4EFE9; display: flex; align-items: center; justify-content: center">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1D4E3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"></path></svg>
+</div>
+<div style="display: flex; flex-direction: column">
+<span style="font-size: 18px; font-weight: 700">Asistente de trámites</span>
+<span style="font-size: 15px; color: #4D5551">Te escucha · Responde en voz alta</span>
+</div>
+</div>
+<span style="font-size: 15px; font-weight: 700; color: #1D4E3B; background: #E4EFE9; padding: 6px 12px; border-radius: 999px">Paso 2 de 4</span>
+</div>
+
+<div style="align-self: flex-end; max-width: 80%; background: #EDEBE4; border-radius: 18px 18px 4px 18px; padding: 14px 18px; font-size: 19px; line-height: 1.45">Quiero hacer la declaración de la Renta.</div>
+<div style="align-self: flex-start; max-width: 85%; background: #E4EFE9; border-radius: 18px 18px 18px 4px; padding: 14px 18px; font-size: 19px; line-height: 1.45">De acuerdo. Pon tu DNI delante de la cámara, por la parte de la foto.</div>
+<div style="align-self: flex-start; max-width: 85%; background: #FFFFFF; border: 2px dashed #B9B6AA; border-radius: 14px; padding: 16px; display: flex; align-items: center; gap: 14px">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4D5551" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><circle cx="9" cy="12" r="2.5"></circle><path d="M14 10h4M14 14h4"></path></svg>
+<span style="font-size: 17px; color: #3B423E">DNI leído correctamente</span>
+</div>
+<div style="align-self: flex-start; max-width: 85%; background: #E4EFE9; border-radius: 18px 18px 18px 4px; padding: 14px 18px; font-size: 19px; line-height: 1.45">Gracias. ¿Este año has cobrado alguna pensión o ayuda?</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<button type="button" style="font-family: inherit; font-size: 18px; font-weight: 700; padding: 12px 20px; border-radius: 12px; border: 2px solid #1D4E3B; background: #FFFFFF; color: #1D4E3B; cursor: pointer">Sí, una pensión</button>
+<button type="button" style="font-family: inherit; font-size: 18px; font-weight: 700; padding: 12px 20px; border-radius: 12px; border: 2px solid #1D4E3B; background: #FFFFFF; color: #1D4E3B; cursor: pointer">No</button>
+<button type="button" style="font-family: inherit; font-size: 18px; font-weight: 700; padding: 12px 20px; border-radius: 12px; border: 2px solid #1D4E3B; background: #FFFFFF; color: #1D4E3B; cursor: pointer">No lo sé</button>
+</div>
+
+<div style="display: flex; align-items: center; gap: 14px; border-top: 1px solid #E2E0D8; padding-top: 16px">
+<button type="button" aria-label="Hablar con la asistente" style="width: 64px; height: 64px; flex: 0 0 64px; border-radius: 50%; border: none; background: {{accent}}; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0"></path><path d="M12 18v4"></path></svg>
+</button>
+<span style="font-size: 18px; color: #3B423E; flex: 1 1 auto">Pulsa el micrófono para contestar</span>
+<button type="button" style="font-family: inherit; font-size: 17px; font-weight: 700; padding: 12px 16px; border-radius: 12px; border: 2px solid #7A4A0B; background: #FFF6E8; color: #7A4A0B; cursor: pointer">Pedir ayuda</button>
+</div>
+</div>
+</section>
+
+<section id="como" style="background: #FFFFFF; border-top: 1px solid #E2E0D8; border-bottom: 1px solid #E2E0D8">
+<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 720px">
+<h2 style="margin: 0; font-size: 40px; line-height: 1.15">Cómo funciona</h2>
+<p style="margin: 0; font-size: 21px; line-height: 1.5; color: #3B423E">Tres pasos. La asistente hace el trabajo pesado y una persona comprueba que todo está bien.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px">
+<div style="background: #F6F5F1; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<span style="width: 52px; height: 52px; border-radius: 50%; background: {{accent}}; color: #FFFFFF; font-size: 24px; font-weight: 700; display: flex; align-items: center; justify-content: center">1</span>
+<h3 style="margin: 0; font-size: 26px">Habla</h3>
+<p style="margin: 0; font-size: 19px; line-height: 1.5; color: #3B423E">En la sala del ayuntamiento, dile a la asistente qué quieres hacer, con tus palabras.</p>
+</div>
+<div style="background: #F6F5F1; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<span style="width: 52px; height: 52px; border-radius: 50%; background: {{accent}}; color: #FFFFFF; font-size: 24px; font-weight: 700; display: flex; align-items: center; justify-content: center">2</span>
+<h3 style="margin: 0; font-size: 26px">La IA lo prepara</h3>
+<p style="margin: 0; font-size: 19px; line-height: 1.5; color: #3B423E">Te dice qué papeles hacen falta, los lee con la cámara y rellena el trámite. También te avisa de ayudas que quizá no conocías.</p>
+</div>
+<div style="background: #F6F5F1; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<span style="width: 52px; height: 52px; border-radius: 50%; background: {{accent}}; color: #FFFFFF; font-size: 24px; font-weight: 700; display: flex; align-items: center; justify-content: center">3</span>
+<h3 style="margin: 0; font-size: 26px">Un gestor lo revisa</h3>
+<p style="margin: 0; font-size: 19px; line-height: 1.5; color: #3B423E">Un gestor comprueba el expediente antes de presentarlo. Te avisamos cuando esté listo, en [PLAZO DE REVISIÓN].</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="tramites" style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 720px">
+<h2 style="margin: 0; font-size: 40px; line-height: 1.15">¿Qué puedo hacer?</h2>
+<p style="margin: 0; font-size: 21px; line-height: 1.5; color: #3B423E">Los papeles más habituales, todo el año.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px">
+<a href="#empezar" style="background: #FFFFFF; border: 1px solid #E2E0D8; border-radius: 20px; padding: 26px; display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: #1B1F1D">
+<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1D4E3B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><path d="M14 3v6h6"></path><path d="M8 13h8M8 17h5"></path></svg>
+<span style="font-size: 24px; font-weight: 700">Declaración de la Renta</span>
+<span style="font-size: 18px; line-height: 1.45; color: #3B423E">De abril a junio. Te pedimos solo lo necesario.</span>
+</a>
+<a href="#empezar" style="background: #FFFFFF; border: 1px solid #E2E0D8; border-radius: 20px; padding: 26px; display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: #1B1F1D">
+<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1D4E3B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22V12"></path><path d="M12 12C12 7 8 4 4 4c0 5 3 8 8 8z"></path><path d="M12 14c0-4 3-7 8-7 0 4-3 7-8 7z"></path></svg>
+<span style="font-size: 24px; font-weight: 700">Ayudas y subvenciones</span>
+<span style="font-size: 18px; line-height: 1.45; color: #3B423E">PAC, ayudas para autónomos y otras convocatorias.</span>
+</a>
+<a href="#empezar" style="background: #FFFFFF; border: 1px solid #E2E0D8; border-radius: 20px; padding: 26px; display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: #1B1F1D">
+<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1D4E3B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"></path><path d="M5 21V10l7-5 7 5v11"></path><path d="M9 21v-5h6v5"></path></svg>
+<span style="font-size: 24px; font-weight: 700">Papeles del ayuntamiento</span>
+<span style="font-size: 18px; line-height: 1.45; color: #3B423E">Empadronamiento, certificados, tasas y licencias.</span>
+</a>
+<a href="#empezar" style="background: #FFFFFF; border: 1px solid #E2E0D8; border-radius: 20px; padding: 26px; display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: #1B1F1D">
+<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1D4E3B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.7 21a2 2 0 0 1-3.4 0"></path></svg>
+<span style="font-size: 24px; font-weight: 700">Avisos de plazos</span>
+<span style="font-size: 18px; line-height: 1.45; color: #3B423E">Te recordamos fechas y los documentos que faltan.</span>
+</a>
+</div>
+</section>
+
+<section style="max-width: 1200px; margin: 0 auto; padding: 0 24px 72px">
+<div style="background: #FFF6E8; border: 1px solid #EBD3A8; border-radius: 24px; padding: 32px; display: flex; flex-wrap: wrap; gap: 32px; align-items: center">
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<h2 style="margin: 0; font-size: 32px; line-height: 1.2">Tus datos se quedan contigo</h2>
+<p style="margin: 0; font-size: 19px; line-height: 1.5; color: #3B423E">La sesión se borra al terminar. Nunca guardamos tus contraseñas ni tu Cl@ve. Solo el gestor ve tu expediente.</p>
+</div>
+<div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<h2 style="margin: 0; font-size: 32px; line-height: 1.2">¿Te atascas?</h2>
+<p style="margin: 0; font-size: 19px; line-height: 1.5; color: #3B423E">Pulsa «Pedir ayuda» y te acompaña la persona de referencia del ayuntamiento.</p>
+</div>
+</div>
+</section>
+
+<section id="ayuntamientos" style="background: {{accent}}; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-wrap: wrap; gap: 48px">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<p style="margin: 0; font-size: 18px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #F2C77E">Para ayuntamientos</p>
+<h2 style="margin: 0; font-size: 44px; line-height: 1.12">Un punto de trámites que no necesita técnicos en el pueblo</h2>
+<p style="margin: 0; font-size: 20px; line-height: 1.5; color: #E4EFE9">Instalamos y mantenemos a distancia el equipo: pantalla, cámara, escáner y conexión de respaldo. El secretario recibe los expedientes ya preparados.</p>
+<a href="#empezar" style="align-self: flex-start; font-size: 20px; font-weight: 700; padding: 16px 26px; border-radius: 14px; background: #FFFFFF; color: #1D4E3B; text-decoration: none">Solicitar una demostración</a>
+</div>
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<div style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.25); border-radius: 18px; padding: 22px">
+<span style="display: block; font-size: 42px; font-weight: 700">707 de 731</span>
+<span style="display: block; font-size: 18px; line-height: 1.45; color: #E4EFE9">municipios de Aragón no llegan a 5.000 habitantes</span>
+<span style="display: block; margin-top: 6px; font-size: 14px; color: #CFE1D7">Fuente: [CITAR FUENTE F1/F2]</span>
+</div>
+<div style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.25); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 18px; color: #E4EFE9">Cuota todo incluido</span>
+<span style="font-size: 32px; font-weight: 700">[€ INSTALACIÓN] + [€ / MES]</span>
+<span style="font-size: 16px; color: #CFE1D7">Equipo, soporte remoto y reposición de piezas</span>
+</div>
+</div>
+</div>
+</section>
+
+<section id="empezar" style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center">
+<h2 style="margin: 0; font-size: 40px; line-height: 1.15">¿Tu pueblo ya tiene punto de trámites?</h2>
+<p style="margin: 0; font-size: 21px; line-height: 1.5; color: #3B423E; max-width: 640px">Escribe el nombre de tu municipio y te decimos dónde está y qué horario tiene.</p>
+<form style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; width: 100%; max-width: 620px">
+<label for="pueblo" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Nombre de tu pueblo</label>
+<input id="pueblo" type="text" placeholder="Ej.: nombre de tu pueblo" style="flex: 1 1 300px; min-width: 0; font-family: inherit; font-size: 20px; padding: 16px 18px; border-radius: 14px; border: 2px solid #8C897E; background: #FFFFFF; color: #1B1F1D">
+<button type="button" style="font-family: inherit; font-size: 20px; font-weight: 700; padding: 16px 26px; border-radius: 14px; border: none; background: {{accent}}; color: #FFFFFF; cursor: pointer">Buscar</button>
+</form>
+</section>
+
+<section id="contacto" style="background: #FFFFFF; border-top: 1px solid #E2E0D8">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px">
+<div style="background: #F6F5F1; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1D4E3B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"></path><path d="M3 7l9 6 9-6"></path></svg>
+<h2 style="margin: 0; font-size: 32px; line-height: 1.2">¿Tienes alguna duda?</h2>
+<p style="margin: 0; font-size: 19px; line-height: 1.5; color: #3B423E">Escríbenos o llámanos. Te contestamos nosotros, no una máquina.</p>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #1B1F1D">[TELÉFONO] · [CORREO DE CONTACTO]</p>
+<a href="#contacto" style="align-self: flex-start; font-size: 20px; font-weight: 700; padding: 16px 26px; border-radius: 14px; background: {{accent}}; color: #FFFFFF; text-decoration: none">Contáctanos</a>
+</div>
+<div style="background: #FFF6E8; border: 1px solid #EBD3A8; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7A4A0B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"></path></svg>
+<h2 style="margin: 0; font-size: 32px; line-height: 1.2">¿Qué te ha parecido?</h2>
+<p style="margin: 0; font-size: 19px; line-height: 1.5; color: #3B423E">Cuéntanos qué te ha gustado y qué cambiarías. Leemos todas las opiniones para mejorar el servicio.</p>
+<a href="Valoracion.dc.html" style="align-self: flex-start; font-size: 20px; font-weight: 700; padding: 16px 26px; border-radius: 14px; border: 2px solid #7A4A0B; background: #FFFFFF; color: #7A4A0B; text-decoration: none">Valóranos</a>
+</div>
+</div>
+</section>
+
+<footer style="background: #1B1F1D; color: #D7D5CD">
+<div style="max-width: 1200px; margin: 0 auto; padding: 36px 24px; display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center">
+<span style="font-size: 22px; font-weight: 700; color: #FFFFFF">cercan<span style="color: #E8A33D">IA</span></span>
+<span style="font-size: 16px">Prototipo · Hackathon Impulsa tu Territorio 2026</span>
+<nav aria-label="Pie" style="display: flex; flex-wrap: wrap; gap: 8px">
+<a href="#inicio" style="font-size: 16px; color: #FFFFFF; padding: 10px 12px">Privacidad</a>
+<a href="#inicio" style="font-size: 16px; color: #FFFFFF; padding: 10px 12px">Accesibilidad</a>
+<a href="#contacto" style="font-size: 16px; color: #FFFFFF; padding: 10px 12px">Contacto</a>
+<a href="Valoracion.dc.html" style="font-size: 16px; color: #FFFFFF; padding: 10px 12px">Valóranos</a>
+</nav>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#1D4E3B","options":["#1D4E3B","#1F4A7A","#6B3FA0"]},"$preview":{"width":1440,"height":3400}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#1D4E3B' };
+}
+}
+</script>
+</body>
+</html>
